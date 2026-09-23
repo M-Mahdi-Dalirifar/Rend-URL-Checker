@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Applications URL Checker</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="popup" aria-labelledby="title">
+      <div class="heading-row">
+        <div class="mark" aria-hidden="true">✓</div>
+        <div>
+          <h1 id="title">Applications</h1>
+          <p class="subtitle">Exact URL lookup</p>
+        </div>
+      </div>
+
+      <section class="url-panel" aria-labelledby="url-label">
+        <p id="url-label" class="label">Current page</p>
+        <p id="current-url" class="current-url">Reading active tab…</p>
+      </section>
+
+      <section id="status" class="status status--checking" aria-live="polite" aria-atomic="true">
+        <span id="status-icon" class="status__icon" aria-hidden="true"></span>
+        <div>
+          <p id="status-title" class="status__title">Checking the current page</p>
+          <p id="status-message" class="status__message">Looking for an existing Google authorization.</p>
+        </div>
+      </section>
+
+      <button id="connect-button" class="button button--primary" type="button" hidden>
+        Connect Google Account
+      </button>
+      <button id="check-button" class="button button--secondary" type="button" hidden>
+        Check Again
+      </button>
+
+      <p class="privacy-note">Read-only. Your current URL is compared locally.</p>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

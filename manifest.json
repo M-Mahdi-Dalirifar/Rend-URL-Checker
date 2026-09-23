@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Applications URL Checker",
+  "version": "1.0.0",
+  "description": "Checks whether the active tab's exact URL appears in the Position Link column of a private Google Sheet.",
+  "permissions": [
+    "activeTab",
+    "identity"
+  ],
+  "host_permissions": [
+    "https://sheets.googleapis.com/*"
+  ],
+  "oauth2": {
+    "client_id": "767274530280-ihb7koovv3ljtakr4shejr4eeb62nldr.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/spreadsheets.readonly"
+    ]
+  },
+  "action": {
+    "default_title": "Check Applications",
+    "default_popup": "popup.html"
+  }
+}
